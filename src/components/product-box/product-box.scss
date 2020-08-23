@@ -1,0 +1,105 @@
+@import '../../style/helpers/variables.scss';
+
+.product-box{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 40px 20px;
+        max-width: 200px;
+        border: 1px solid $silver;
+        border-radius: 5px;
+        text-align: center;
+        padding: 12px;
+        box-shadow: 0px 2px 2px rgba(50, 50, 71, 0.06),
+        0px 2px 4px rgba(50, 50, 71, 0.06);
+        background: $linxWhite;
+        position: relative;
+        transition: all 175ms;
+
+    &__img {
+        overflow: hidden;
+            margin-bottom: 20px;
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &__name{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 8px;
+        text-transform: capitalize;
+        min-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__code {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 8px;
+    }
+    &__price {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: $nephritis;
+    }
+
+    .btn{
+        color: $whiteColor;
+        background: $emerald;
+        margin: 20px -12px -12px -12px;
+        border-radius: 0;
+        transition: all 175ms;
+
+        &:hover{
+            color: $whiteColor;
+            background: $nephritis;
+            transition: all 175ms;
+        }
+    }
+
+    .badge{
+        position: absolute;
+        top: 12px;
+        left: 0;
+        background: linear-gradient(258.76deg, #F37231 0%, #F6E411 0.01%, #F37231 99.81%);
+        color: $whiteColor;
+        border-radius: 0 5px 5px 0;
+        border-radius: 0 5px 5px 0;
+        padding: 6px;
+        box-shadow: 0px 2px 2px rgba(50, 50, 71, 0.06),
+        0px 2px 4px rgba(50, 50, 71, 0.06);
+    }
+
+    .wishlist{
+        .icon {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 26px;
+        }
+        .icon-heart {
+            color: $silver;
+
+            &:hover {
+                color: $chiGong;
+            }
+        }
+        .icon-heartfill {
+            display: none;
+        }
+
+        &:hover{
+            .icon-heartfill{
+                display: block;
+                color: $chiGong;
+            }
+        }
+    }   
+
+    
+}

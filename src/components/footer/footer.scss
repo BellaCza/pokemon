@@ -1,0 +1,68 @@
+@import '../../style/helpers/variables.scss';
+
+.footer{
+    background-color: $midnightBlue;
+    color: $whiteColor;
+    padding: 40px 0 20px 0;
+    margin: 40px -15px 0 -15px;
+
+    @media (max-width: $breakpoint) {
+        padding: 40px 16px 20px 16px;
+    }
+
+    &__info, &__payment, &__rights, &__certificate{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__info{
+
+        @media (max-width: $breakpoint) {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $wetAsphalt;
+        }
+
+        .link{
+            margin-top: 20px;
+        }
+
+        .image{
+            width: 40px;
+        }
+    }
+
+    &__payment {
+
+        @media (max-width: $breakpoint) {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $wetAsphalt;
+        }
+
+        .logo{
+            margin: 20px 10px 0 10px;
+            width: 40px;
+        }
+    }
+
+    &__certificate {
+
+        .logo {
+            margin-top: 10px;
+        }
+    }
+
+    &__rights{
+        text-align: center;
+        padding-top: 20px;
+        margin-top: 40px;
+        border-top: 1px solid $wetAsphalt;
+
+        @media (max-width: $breakpoint) {
+            margin-top: 20px;
+        }
+    }
+}

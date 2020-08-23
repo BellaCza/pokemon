@@ -1,0 +1,86 @@
+@import '../../style/helpers/variables.scss';
+
+/* Fire Pokémon Store*/
+.fire{
+    .header {
+        background-color: $chiGong;
+
+        .menu__list-item {
+            a:hover {
+                color: $orangeVille;
+            }
+        }
+    }
+}
+
+/* Water Pokémon Store*/
+.water{
+    .header {
+        background-color: $mediterraneanSea;
+
+        .menu__list-item {
+            a:hover {
+                color: $turkishAcqua;
+            }
+        }
+    }
+}
+
+/* Electric Pokémon Store*/
+.electric{
+    .header {
+        background-color: $sunFlower;
+
+        .menu__list-item {
+            a:hover {
+                color: $radiantYellow;
+            }
+        }
+    }
+}
+
+/* Dark Pokémon Store*/
+.dark {
+    .header {
+        background-color: $midnightBlue;
+
+        .menu__list-item {
+            a:hover {
+                color: $wetAsphalt;
+            }
+        }
+    }
+}
+
+/* Fairy Pokémon Store*/
+.fairy{
+    .header{
+        background-color: $lavanderRose;
+
+        .header-main__content{
+             .user{
+                &__profile{
+                    border-color: $darkGray;
+                }
+                a{
+                   color: $darkGray;
+                }
+                .badge{
+                    color: $whiteColor;
+                }
+             } 
+        }
+
+        .menu__list-item{
+            a:hover{
+                color: $lavanderTea;
+            }
+        }
+
+        .menu__mobile{
+            .icon {
+                color: $darkGray;
+            }
+        }
+    }
+}

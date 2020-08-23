@@ -1,0 +1,51 @@
+@import '../../style/helpers/variables.scss';
+
+.carousel-main{
+    // display: flex;
+    // align-content: center;
+    margin: 0 -15px 40px -15px;
+
+    img{
+        max-width: 100%;
+    }
+
+    .nav{
+        position: absolute;
+        background: transparent;
+        border: none;
+        color: $darkGray;
+        transition: all 175ms;
+        font-size: 40px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+        &:hover{
+            opacity: 0.5;
+            transition: all 175ms;
+        }
+
+        &:focus{
+            outline: none;
+        }
+
+        &--next{
+            right: 20px;
+        }
+
+        &--prev{
+            left: 40px;
+        }
+    }
+
+    li{
+        padding-bottom: 0 !important;
+        height: 100%;
+    }
+
+    .carousel__inner-slide{
+        position: relative;
+    }
+}

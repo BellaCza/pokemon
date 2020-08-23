@@ -1,0 +1,294 @@
+@import '../../style/helpers/variables.scss';
+@import '../../style/helpers/global.scss';
+
+.header{
+    background-color: $darkBlue;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+
+    .top-bar{
+        background-color: $darkGray;
+
+        &__text{
+            color: $whiteColor;
+            text-align: center;
+            margin: 6px;
+
+            .spotlight{
+                color: $sunFlower;
+            }
+        }
+    }
+
+    .header-main{
+
+        &__content{
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+
+            @media (max-width: $breakpoint) {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .logo {
+                width: 200px;
+                margin: 10px 0;
+
+                @media (max-width: $breakpoint) {
+                    width: 150px;
+                }
+            }
+
+            .search {
+                display: flex;
+                position: relative;
+                width: 100%;
+                margin: 0 40px;
+
+                @media (max-width: $breakpoint) {
+                    order: 3;
+                    margin: 0;
+                    position: absolute;
+                    z-index: 1;
+                    right: 80px;
+                    left: 50px;
+                    width: auto;
+                    display: none;
+
+                    &.show{
+                        display: flex;
+                    }
+                }
+
+                .icon {
+                    color: $darkGray;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 20px;
+                    margin: auto;
+                }
+
+                .search-bar {
+                    border: 1px solid $darkGray;
+                    border-radius: 5px;
+                    background: $whiteColor;
+                    font-size: 16px;
+                    font-weight: 300;
+                    width: 100%;
+                    height: 45px;
+                    padding: 8px 40px 8px 20px;
+                    outline: none;
+
+                    @media (max-width: $breakpoint) {
+                        height: 60px;
+                    }
+                }
+            }
+
+            .menu__mobile {
+
+                @media (min-width: $breakpoint) {
+                    display: none;
+                }
+
+                .icon {
+                    font-size: 30px;
+                    color: $whiteColor;
+                }
+
+            }
+
+            .user{
+                display: flex;
+
+                .icon{
+                    font-size: 26px;
+                }
+
+                a {
+                    color: $whiteColor;
+                    position: relative;
+                }
+
+                &__profile{
+                    padding: 0 40px;
+                    border-right: 1px solid $whiteColor;
+
+                    @media (max-width: $breakpoint) {
+                        display: none;
+                    }
+                }
+
+                &__cart {
+                    padding: 0 40px;
+
+                    @media (max-width: $breakpoint) {
+                        padding: 0 20px;
+                    }
+
+                    .badge{
+                        position: absolute;
+                        top: -8px;
+                        right: -8px;
+                        border-radius: 50%;
+                        font-size: 12px;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $androidGreen;
+                    }
+                }
+
+                &__search {
+                    padding: 0 20px 0 0;
+                    border-right: 1px solid $whiteColor;
+
+                    @media (min-width: $breakpoint) {
+                        display: none;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    .menu{
+        background-color: $clouds;
+        border-bottom: 1px solid $silver;
+        box-shadow: 0px 2px 2px rgba(50, 50, 71, 0.06),
+        0px 2px 4px rgba(50, 50, 71, 0.06);
+
+        @media (max-width: $breakpoint) {
+            display: flex;
+            position: fixed;
+            top: -1px;
+            bottom: -1px;
+            left: -100%;
+            width: 75%;
+            transition: left 175ms ease-in-out;
+
+            &.show{
+                left: -1px;
+                transition: left 175ms ease-in-out;
+            }
+
+            .row{
+                width: 100%;
+                margin: 0;
+            }
+
+            .container{
+                padding: 0;
+            }
+
+            .menu__list{
+                padding: 0;
+                flex-direction: column;
+
+                &-item{
+                    padding: 15px 0;
+                    border-top: 1px solid $silver;
+                }
+
+                a{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .icon{
+                    display: block;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .overlay{
+            @media (max-width: $breakpoint) {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 75%;
+                background: rgba(0, 0, 0, 0.6);
+                transition: all 175ms ease-in-out;
+
+                &.show{
+                    display: block;
+                    transition: all 175ms ease-in-out;
+                }
+            }
+        }
+
+        &__close{
+            @media (min-width: $breakpoint) {
+                display: none;
+            }
+
+            font-size: 30px;
+
+            a {
+                color: $darkGray;
+            }
+        }
+
+        &__user{
+            @media (min-width: $breakpoint) {
+                display: none;
+            }
+
+            font-size: 30px;
+            margin: 30px 0;
+
+            a {
+                color: $darkGray;
+                display: flex;
+                align-items: center;
+            }
+
+            p{
+                font-size: 16px;
+                margin: 0 0 0 10px;
+            }
+
+        }
+
+        &__list{
+            margin: 0;
+            padding: 12px;
+            display: flex;
+            justify-content: space-evenly;
+
+            &-item{
+                list-style: none;
+
+                a{
+                    color: $darkGray;
+                    transition: all 175ms;
+                    text-decoration: none;
+
+                    &:hover{
+                        color: $vividBlue;
+                        transition: all 175ms;
+                    }
+                }
+
+                .icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}
