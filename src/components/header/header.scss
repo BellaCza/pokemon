@@ -23,6 +23,24 @@
         }
     }
 
+    .overlay {
+        @media (max-width: $breakpoint) {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6);
+            transition: all 175ms ease-in-out;
+
+            &.show {
+                display: block;
+                transition: all 175ms ease-in-out;
+            }
+        }
+    }
+
     .header-main{
 
         &__content{
@@ -177,6 +195,7 @@
             left: -100%;
             width: 75%;
             transition: left 175ms ease-in-out;
+            z-index: 9;
 
             &.show{
                 left: -1px;
@@ -210,24 +229,6 @@
                 .icon{
                     display: block;
                     font-size: 16px;
-                }
-            }
-        }
-
-        .overlay{
-            @media (max-width: $breakpoint) {
-                display: none;
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 75%;
-                background: rgba(0, 0, 0, 0.6);
-                transition: all 175ms ease-in-out;
-
-                &.show{
-                    display: block;
-                    transition: all 175ms ease-in-out;
                 }
             }
         }
