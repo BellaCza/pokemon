@@ -3,32 +3,113 @@
 .cart{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     bottom: 0;
-    left: 0;
-    display: none;
+    transition: right 175ms ease-in-out;
 
     &.show{
-        display: block;
+        right: 0;
+        transition: right 175ms ease-in-out;
 
-        .cart__inner {
-            transition: right 175ms ease-in-out;
-            right: 0;
+        .overlay {
+            display: block;
         }
     }
 
-    &__inner{
-        width: 40%;
+    &__close{
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        right: 16px;
+
+        a {
+            color: $darkGray;
+        }
+    }
+
+    &__flexbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         height: 100%;
-        position: fixed;
+    }
+
+    &__inner{
+        width: 400px;
+        height: 100%;
+        position: absolute;
         top: 0;
         bottom: 0;
-        right: -100%;
-        background: #fff;
+        right: 0;
         transition: right 175ms ease-in-out;
+        background-color: $clouds;
+        padding: 16px;
 
         @media (max-width: $breakpoint) {
-            width: 75%;
+            width: 280px;
+        }
+
+        h4{
+            margin-top: 16px;
+        }
+
+        .prod-list{
+            overflow-y: scroll;
+        }
+
+        .summary{
+            border-top: 1px solid $silver;
+            padding: 20px 10px;
+
+            &__line{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                align-items: center;
+
+                .info{
+                    font-weight: bold;
+
+                    &.green{
+                        color: $nephritis;
+                    }
+                }
+
+                &--total {
+                    border-top: 1px solid $lightGray;
+                    padding-top: 10px;
+
+                    .title{
+                        font-weight: 500;
+                    }
+                    .info{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .btn{
+            width: 100%;
+            &--buy{
+                border-radius: 5px;
+                color: $whiteColor;
+                background-color: $darkGray;
+                height: 40px;
+
+                &:hover {
+                   background-color: $darkBlue;
+                   color: $whiteColor;
+                }
+            }
+            &--cancel{
+                text-decoration: underline;
+
+                &:hover{
+                    text-decoration: underline;
+                    color: $vividBlue;
+                }
+            }
         }
     }
 
@@ -39,5 +120,6 @@
         bottom: 0;
         left: 0;
         background: rgba(0, 0, 0, 0.6);
+        display: none;
     }
 }

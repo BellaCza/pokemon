@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import {
   BrowserRouter as Router,
   Link
@@ -91,37 +91,55 @@ function Header(props) {
                 </a>
               </div>
               <ul className="menu__list">
-                <li className="menu__list-item">
+                <li
+                  className="menu__list-item"
+                  onClick={() => setshowMenu(false)}
+                >
                   <Link to="/" onClick={() => onChangeType("")}>
-                    Home
+                    Início
                     <ChevronRight className="icon" />
                   </Link>
                 </li>
-                <li className="menu__list-item">
+                <li
+                  className="menu__list-item"
+                  onClick={() => setshowMenu(false)}
+                >
                   <Link to="/water" onClick={() => onChangeType("water")}>
                     Água
                     <ChevronRight className="icon" />
                   </Link>
                 </li>
-                <li className="menu__list-item">
+                <li
+                  className="menu__list-item"
+                  onClick={() => setshowMenu(false)}
+                >
                   <Link to="/fire" onClick={() => onChangeType("fire")}>
                     Fogo
                     <ChevronRight className="icon" />
                   </Link>
                 </li>
-                <li className="menu__list-item">
+                <li
+                  className="menu__list-item"
+                  onClick={() => setshowMenu(false)}
+                >
                   <Link to="/electric" onClick={() => onChangeType("electric")}>
                     Elétrico
                     <ChevronRight className="icon" />
                   </Link>
                 </li>
-                <li className="menu__list-item">
+                <li
+                  className="menu__list-item"
+                  onClick={() => setshowMenu(false)}
+                >
                   <Link to="/dark" onClick={() => onChangeType("dark")}>
                     Sombra
                     <ChevronRight className="icon" />
                   </Link>
                 </li>
-                <li className="menu__list-item">
+                <li
+                  className="menu__list-item"
+                  onClick={() => setshowMenu(false)}
+                >
                   <Link to="/fairy" onClick={() => onChangeType("fairy")}>
                     Fada
                     <ChevronRight className="icon" />
@@ -131,11 +149,11 @@ function Header(props) {
             </nav>
           </div>
         </div>
-        <div
-          className={`overlay ${showMenu ? "show" : ""}`}
-          onClick={() => setshowMenu(false)}
-        ></div>
       </section>
+      <div
+        className={`overlay ${showMenu ? "show" : ""}`}
+        onClick={() => setshowMenu(false)}
+      ></div>
       <Minicart isOpen={showCart} onClose={() => setshowCart(false)} />
     </header>
   );

@@ -1,11 +1,11 @@
 Pokémon Store study case by Isabella Czamanski Rota.
 
 Features:
-- Generic, water, fire and electric stores.
+- Generic, water, fire, electric, dark and fairy stores.
 - Search.
 - Navigation.
 - Cart.
-- Checkout.
+- Confirmation modal.
 - Banner carousel.
 - Responsive.
 
@@ -13,6 +13,6 @@ Setup:
 - React app.
 - Booststrap.
 - Sass.
-- BEM Css.
+- BEM CSS.
 
-Live demo: 
+Live demo: https://pokemon-store.herokuapp.com/

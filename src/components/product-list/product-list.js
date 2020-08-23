@@ -5,8 +5,6 @@ import "./product-list.scss";
 function ProductList(props) {   
     const { type, search } = props;
 
-    console.log(type);
-
     const [products, setProducts] = useState();
     useEffect(() => {
       if (!type) {

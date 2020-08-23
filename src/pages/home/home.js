@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
 import Carousel from "../../components/carousel/carousel";
 import ProductList from "../../components/product-list/product-list";
 import "./home.scss";
