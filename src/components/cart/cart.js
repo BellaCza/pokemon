@@ -1,14 +1,17 @@
 import React, {useState, useEffect} from "react";
-import "./cart.css";
+import "./cart.scss";
 
-function Cart(props) {    
+function Minicart(props) {   
+  
+  const {isOpen, onClose} = props;
 
     return (
-      <div className="cart">
-        teste
-      </div>
+      <section className={`cart ${isOpen ? "show" : ""}`}>
+        <div className="overlay" onClick={onClose}></div>
+        <div className="cart__inner">teste</div>
+      </section>
     );
 
 }
 
-export default Cart;
+export default Minicart;

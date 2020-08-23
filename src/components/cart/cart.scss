@@ -1,0 +1,43 @@
+@import '../../style/helpers/variables.scss';
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+
+    &.show{
+        display: block;
+
+        .cart__inner {
+            transition: right 175ms ease-in-out;
+            right: 0;
+        }
+    }
+
+    &__inner{
+        width: 40%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        background: #fff;
+        transition: right 175ms ease-in-out;
+
+        @media (max-width: $breakpoint) {
+            width: 75%;
+        }
+    }
+
+    .overlay{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+}

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import "./confirmation.css";
+import "./confirmation.scss";
 
 function Confirmation(props) {    
 

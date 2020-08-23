@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
 import ProductBox from "../product-box/product-box";
-import "./product-list.css";
+import "./product-list.scss";
 
 function ProductList(props) {   
     const { type, search } = props;
+
+    console.log(type);
 
     const [products, setProducts] = useState();
     useEffect(() => {
@@ -22,8 +24,6 @@ function ProductList(props) {
     if (!products.length) {
       return null;
     }
-
-    console.log(search);
 
     return (
       <div className="product-list">

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import LazyLoad from "react-lazy-load";
-import "./product-box.css";
+import "./product-box.scss";
+import { Heart, HeartFill } from "react-bootstrap-icons";
+import Default from "../../images/not-found.png";
 
 function ProductBox(props) {    
     const {product} = props;
@@ -24,14 +26,27 @@ function ProductBox(props) {
     }
 
     return (
-      <LazyLoad height={300}>
-        <div className="product-box">
-          {pokemon.name} - {pokemon.weight}
-          <img
-            src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`}
-            alt={pokemon.name}
-          />
-        </div>
+      <LazyLoad>
+        <article className="product-box">
+          <div className="badge">Novo</div>
+          <div className="wishlist">
+            <Heart className="icon icon-heart" />
+            <HeartFill className="icon icon-heartfill" />
+          </div>
+          <div className="product-box__img">
+            <img
+              onError={(ev) =>
+                ev.target.src !== Default ? (ev.target.src = Default) : null
+              }
+              src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`}
+              alt={pokemon.name}
+            />
+          </div>
+          <div className="product-box__name">{pokemon.name}</div>
+          <div className="product-box__code">Código: {pokemon.id}</div>
+          <div className="product-box__price">R${pokemon.weight},00</div>
+          <button className="btn">Comprar</button>
+        </article>
       </LazyLoad>
     );
 
