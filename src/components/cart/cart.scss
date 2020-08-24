@@ -55,6 +55,14 @@
 
         .prod-list{
             overflow-y: scroll;
+
+            &__item{
+                border-bottom: 1px solid $lightGray;
+
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
         }
 
         .summary{
