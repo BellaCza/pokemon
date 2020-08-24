@@ -21,7 +21,15 @@ function Minicart(props) {
             <div>
               <h4>Produtos no carrinho</h4>
               <div className="prod-list">
-                teste
+                <div className="prod-list__item">
+                  <div className="prod-list__img">
+                    <img src="" alt=""/>
+                  </div>
+                  <div className="prod-list__name"></div>
+                  <div className="prod-list__code"></div>
+                  <div className="prod-list__price"></div>
+                </div>
+                <div className="prod-list__item">teste</div>
               </div>
             </div>
             <div>
