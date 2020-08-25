@@ -18,13 +18,13 @@ function Minicart(props) {
             </a>
           </div>
           <div className="cart__flexbox">
-            <div className="cart__list ">
+            <div className = "cart__list cart__list--empty">
               <h4>Produtos no carrinho</h4>
-              {/* <div className="empty__text">
+              <div className="empty__text">
                 <h3>Nenhum Pokémon adicionado :(</h3>
               </div> 
-              cart__list--empty*/}
-              <ul className="prod-list">
+             
+              {/* <ul className="prod-list">
                 <li className="prod-list__item">
                   <div className="prod-list__inner">
                     <div className="prod-list__img">
@@ -37,7 +37,8 @@ function Minicart(props) {
                   </div>
                   <div className="prod-list__price">R$99,00</div>
                 </li>
-              </ul>
+              </ul> */}
+
             </div>
             <div>
               <div className="summary">
