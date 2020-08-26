@@ -4,8 +4,7 @@ Features:
 - Generic, water, fire, electric, dark and fairy stores.
 - Search.
 - Navigation.
-- Cart.
-- Confirmation modal.
+- Mini Cart.
 - Banner carousel.
 - Responsive.
 
@@ -14,5 +13,3 @@ Setup:
 - Booststrap.
 - Sass.
 - BEM CSS.
-
-Live demo: https://pokemon-store.herokuapp.com/
